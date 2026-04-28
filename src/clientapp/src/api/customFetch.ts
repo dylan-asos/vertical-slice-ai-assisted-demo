@@ -234,7 +234,6 @@ export async function customFetch<T>(url: string, options: RequestInit = {}): Pr
         try {
           // If we were using authentication, then we'd get an access token here and inject it
           // for all API calls
-
           // const token = await config.tokenProvider()
           //if (token) {
           //  headers.set('Authorization', `Bearer ${token}`)
