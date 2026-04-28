@@ -23,12 +23,14 @@ public class GetAllGeographiesQueryHandler(VerticalSliceDataContext dataContext)
 
         if (!string.IsNullOrWhiteSpace(request.Region))
         {
-            baseQuery = baseQuery.Where(g => g.Region != null && g.Region.Contains(request.Region));
+            string regionLower = request.Region.ToLower();
+            baseQuery = baseQuery.Where(g => g.Region != null && g.Region.ToLower().Contains(regionLower));
         }
 
         if (!string.IsNullOrWhiteSpace(request.SubRegion))
         {
-            baseQuery = baseQuery.Where(g => g.SubRegion != null && g.SubRegion.Contains(request.SubRegion));
+            string subRegionLower = request.SubRegion.ToLower();
+            baseQuery = baseQuery.Where(g => g.SubRegion != null && g.SubRegion.ToLower().Contains(subRegionLower));
         }
 
         if (!string.IsNullOrWhiteSpace(request.SearchTerm))

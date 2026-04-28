@@ -36,21 +36,111 @@ public static class DatabaseSeeder
 
         var geographies = new List<Model.Geography>
         {
-            new() { Name = "United States", ShortCode = "US", Region = "Americas", SubRegion = "Northern America", Capital = "Washington, D.C.", Population = 331000000, AreaKm2 = 9833517, GeoCodes = "{\"latitude\":37.09,\"longitude\":-95.71}" },
-            new() { Name = "United Kingdom", ShortCode = "GB", Region = "Europe", SubRegion = "Northern Europe", Capital = "London", Population = 67000000, AreaKm2 = 243610, GeoCodes = "{\"latitude\":55.38,\"longitude\":-3.44}" },
-            new() { Name = "Germany", ShortCode = "DE", Region = "Europe", SubRegion = "Western Europe", Capital = "Berlin", Population = 83000000, AreaKm2 = 357114, GeoCodes = "{\"latitude\":51.17,\"longitude\":10.45}" },
-            new() { Name = "France", ShortCode = "FR", Region = "Europe", SubRegion = "Western Europe", Capital = "Paris", Population = 67000000, AreaKm2 = 551695, GeoCodes = "{\"latitude\":46.23,\"longitude\":2.21}" },
-            new() { Name = "Japan", ShortCode = "JP", Region = "Asia", SubRegion = "Eastern Asia", Capital = "Tokyo", Population = 126000000, AreaKm2 = 377930, GeoCodes = "{\"latitude\":36.20,\"longitude\":138.25}" },
-            new() { Name = "China", ShortCode = "CN", Region = "Asia", SubRegion = "Eastern Asia", Capital = "Beijing", Population = 1400000000, AreaKm2 = 9596960, GeoCodes = "{\"latitude\":35.86,\"longitude\":104.20}" },
-            new() { Name = "India", ShortCode = "IN", Region = "Asia", SubRegion = "Southern Asia", Capital = "New Delhi", Population = 1380000000, AreaKm2 = 3287263, GeoCodes = "{\"latitude\":20.59,\"longitude\":78.96}" },
-            new() { Name = "Australia", ShortCode = "AU", Region = "Oceania", SubRegion = "Australia and New Zealand", Capital = "Canberra", Population = 25000000, AreaKm2 = 7692024, GeoCodes = "{\"latitude\":-25.27,\"longitude\":133.78}" },
-            new() { Name = "Brazil", ShortCode = "BR", Region = "Americas", SubRegion = "South America", Capital = "Brasília", Population = 213000000, AreaKm2 = 8515767, GeoCodes = "{\"latitude\":-14.24,\"longitude\":-51.93}" },
-            new() { Name = "Canada", ShortCode = "CA", Region = "Americas", SubRegion = "Northern America", Capital = "Ottawa", Population = 38000000, AreaKm2 = 9984670, GeoCodes = "{\"latitude\":56.13,\"longitude\":-106.35}" },
-            new() { Name = "South Africa", ShortCode = "ZA", Region = "Africa", SubRegion = "Sub-Saharan Africa", Capital = "Pretoria", Population = 60000000, AreaKm2 = 1221037, GeoCodes = "{\"latitude\":-30.56,\"longitude\":22.94}" },
-            new() { Name = "Nigeria", ShortCode = "NG", Region = "Africa", SubRegion = "Sub-Saharan Africa", Capital = "Abuja", Population = 206000000, AreaKm2 = 923768, GeoCodes = "{\"latitude\":9.08,\"longitude\":8.68}" },
-            new() { Name = "Mexico", ShortCode = "MX", Region = "Americas", SubRegion = "Central America", Capital = "Mexico City", Population = 128000000, AreaKm2 = 1964375, GeoCodes = "{\"latitude\":23.63,\"longitude\":-102.55}" },
-            new() { Name = "Italy", ShortCode = "IT", Region = "Europe", SubRegion = "Southern Europe", Capital = "Rome", Population = 60000000, AreaKm2 = 301340, GeoCodes = "{\"latitude\":41.87,\"longitude\":12.57}" },
-            new() { Name = "Spain", ShortCode = "ES", Region = "Europe", SubRegion = "Southern Europe", Capital = "Madrid", Population = 47000000, AreaKm2 = 505990, GeoCodes = "{\"latitude\":40.46,\"longitude\":-3.75}" },
+            new()
+            {
+                Name = "United States", ShortCode = "US", Region = "Americas",
+                SubRegion = "Northern America", Capital = "Washington, D.C.",
+                Population = 331000000, AreaKm2 = 9833517,
+                GeoCodes = "{\"latitude\":37.09,\"longitude\":-95.71}"
+            },
+            new()
+            {
+                Name = "United Kingdom", ShortCode = "GB", Region = "Europe",
+                SubRegion = "Northern Europe", Capital = "London",
+                Population = 67000000, AreaKm2 = 243610,
+                GeoCodes = "{\"latitude\":55.38,\"longitude\":-3.44}"
+            },
+            new()
+            {
+                Name = "Germany", ShortCode = "DE", Region = "Europe",
+                SubRegion = "Western Europe", Capital = "Berlin",
+                Population = 83000000, AreaKm2 = 357114,
+                GeoCodes = "{\"latitude\":51.17,\"longitude\":10.45}"
+            },
+            new()
+            {
+                Name = "France", ShortCode = "FR", Region = "Europe",
+                SubRegion = "Western Europe", Capital = "Paris",
+                Population = 67000000, AreaKm2 = 551695,
+                GeoCodes = "{\"latitude\":46.23,\"longitude\":2.21}"
+            },
+            new()
+            {
+                Name = "Japan", ShortCode = "JP", Region = "Asia",
+                SubRegion = "Eastern Asia", Capital = "Tokyo",
+                Population = 126000000, AreaKm2 = 377930,
+                GeoCodes = "{\"latitude\":36.20,\"longitude\":138.25}"
+            },
+            new()
+            {
+                Name = "China", ShortCode = "CN", Region = "Asia",
+                SubRegion = "Eastern Asia", Capital = "Beijing",
+                Population = 1400000000, AreaKm2 = 9596960,
+                GeoCodes = "{\"latitude\":35.86,\"longitude\":104.20}"
+            },
+            new()
+            {
+                Name = "India", ShortCode = "IN", Region = "Asia",
+                SubRegion = "Southern Asia", Capital = "New Delhi",
+                Population = 1380000000, AreaKm2 = 3287263,
+                GeoCodes = "{\"latitude\":20.59,\"longitude\":78.96}"
+            },
+            new()
+            {
+                Name = "Australia", ShortCode = "AU", Region = "Oceania",
+                SubRegion = "Australia and New Zealand", Capital = "Canberra",
+                Population = 25000000, AreaKm2 = 7692024,
+                GeoCodes = "{\"latitude\":-25.27,\"longitude\":133.78}"
+            },
+            new()
+            {
+                Name = "Brazil", ShortCode = "BR", Region = "Americas",
+                SubRegion = "South America", Capital = "Brasília",
+                Population = 213000000, AreaKm2 = 8515767,
+                GeoCodes = "{\"latitude\":-14.24,\"longitude\":-51.93}"
+            },
+            new()
+            {
+                Name = "Canada", ShortCode = "CA", Region = "Americas",
+                SubRegion = "Northern America", Capital = "Ottawa",
+                Population = 38000000, AreaKm2 = 9984670,
+                GeoCodes = "{\"latitude\":56.13,\"longitude\":-106.35}"
+            },
+            new()
+            {
+                Name = "South Africa", ShortCode = "ZA", Region = "Africa",
+                SubRegion = "Sub-Saharan Africa", Capital = "Pretoria",
+                Population = 60000000, AreaKm2 = 1221037,
+                GeoCodes = "{\"latitude\":-30.56,\"longitude\":22.94}"
+            },
+            new()
+            {
+                Name = "Nigeria", ShortCode = "NG", Region = "Africa",
+                SubRegion = "Sub-Saharan Africa", Capital = "Abuja",
+                Population = 206000000, AreaKm2 = 923768,
+                GeoCodes = "{\"latitude\":9.08,\"longitude\":8.68}"
+            },
+            new()
+            {
+                Name = "Mexico", ShortCode = "MX", Region = "Americas",
+                SubRegion = "Central America", Capital = "Mexico City",
+                Population = 128000000, AreaKm2 = 1964375,
+                GeoCodes = "{\"latitude\":23.63,\"longitude\":-102.55}"
+            },
+            new()
+            {
+                Name = "Italy", ShortCode = "IT", Region = "Europe",
+                SubRegion = "Southern Europe", Capital = "Rome",
+                Population = 60000000, AreaKm2 = 301340,
+                GeoCodes = "{\"latitude\":41.87,\"longitude\":12.57}"
+            },
+            new()
+            {
+                Name = "Spain", ShortCode = "ES", Region = "Europe",
+                SubRegion = "Southern Europe", Capital = "Madrid",
+                Population = 47000000, AreaKm2 = 505990,
+                GeoCodes = "{\"latitude\":40.46,\"longitude\":-3.75}"
+            },
         };
 
         await context.Geographies.AddRangeAsync(geographies);
