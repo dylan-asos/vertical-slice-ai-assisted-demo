@@ -11,10 +11,29 @@ public class VerticalSliceDataContext(DbContextOptions<VerticalSliceDataContext>
     : DbContext(dataContextOptions)
 {
     public DbSet<Audit> Audit { get; set; }
+    public DbSet<Geography> Geographies { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         base.OnModelCreating(modelBuilder);
+
+        // Configure Geography table
+        modelBuilder.Entity<Geography>(entity =>
+        {
+            entity.HasKey(e => e.GeographyId);
+            entity.Property(e => e.GeographyId).ValueGeneratedOnAdd();
+
+            entity.Property(e => e.Name).IsRequired().HasMaxLength(200);
+            entity.Property(e => e.ShortCode).IsRequired().HasMaxLength(10);
+            entity.Property(e => e.GeoCodes).HasMaxLength(200);
+            entity.Property(e => e.Region).HasMaxLength(100);
+            entity.Property(e => e.SubRegion).HasMaxLength(100);
+            entity.Property(e => e.Capital).HasMaxLength(200);
+
+            entity.HasIndex(e => e.ShortCode).IsUnique();
+            entity.HasIndex(e => e.Name);
+            entity.HasIndex(e => e.Region);
+        });
 
         // Configure Audit table
         modelBuilder.Entity<Audit>(entity =>

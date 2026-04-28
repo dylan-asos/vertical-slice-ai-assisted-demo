@@ -1,6 +1,6 @@
 import React from 'react'
 import CIcon from '@coreui/icons-react'
-import { cilSpeedometer, cilShieldAlt } from '@coreui/icons'
+import { cilSpeedometer, cilShieldAlt, cilGlobeAlt } from '@coreui/icons'
 import { CNavItem, CNavTitle } from '@coreui/react'
 
 interface Badge {
@@ -27,6 +27,12 @@ const _nav: NavItem[] = [
   {
     component: CNavTitle,
     name: 'Administration',
+  },
+  {
+    component: CNavItem,
+    name: 'Geographies',
+    to: '/administration/geographies',
+    icon: <CIcon icon={cilGlobeAlt} customClassName="nav-icon" />,
   },
   {
     component: CNavItem,
